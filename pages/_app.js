@@ -1,7 +1,19 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import Router from "next/router";
+import NProgress from "nprogress";
+
+import Layout from "../components/Layout";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+	return (
+		<>
+			<Head></Head>
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</>
+	);
 }
 
-export default MyApp
+export default MyApp;
