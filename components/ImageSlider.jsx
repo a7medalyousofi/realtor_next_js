@@ -1,29 +1,5 @@
-import { useContext } from "react";
-import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-
-const LeftArrow = () => {
-	const { prevSlide } = useContext(VisibilityContext);
-	return (
-		<div
-			onClick={prevSlide}
-			className='flex cursor-pointer items-center justify-center'>
-			<FaArrowAltCircleLeft />
-		</div>
-	);
-};
-const RightArrow = () => {
-	const { nextSlide } = useContext(VisibilityContext);
-	return (
-		<div
-			onClick={nextSlide}
-			className='flex cursor-pointer items-center justify-center'>
-			<FaArrowAltCircleRight />
-		</div>
-	);
-};
 
 const ImageSlider = ({ data }) => {
 	return (
@@ -34,8 +10,8 @@ const ImageSlider = ({ data }) => {
 			dynamicHeight={true}
 			showStatus={false}>
 			{data.map((photo) => (
-				<div key={photo.id} itemId={photo.id}>
-					<img className='' src={photo.url} alt='property' />
+				<div key={photo.id}>
+					<Image src={photo.url} alt='property' />
 				</div>
 			))}
 		</Carousel>

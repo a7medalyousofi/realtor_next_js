@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { baseUrl, fetchApi } from "../utils/fetchApi";
 import Property from "./../components/Property";
@@ -14,7 +15,7 @@ const Banner = ({
 }) => (
 	<div className='border-y border-slate-200 bg-white'>
 		<div className='container mx-auto flex flex-col items-center justify-start gap-6 px-4 py-8 md:flex-row md:gap-12'>
-			<img
+			<Image
 				className='rounded-lg'
 				src={imageUrl}
 				width='500px'

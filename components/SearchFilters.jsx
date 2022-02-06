@@ -24,7 +24,7 @@ function SearchFilters() {
 	return (
 		<div className='grid w-full grid-cols-2 gap-2 rounded-lg bg-slate-50 p-4 sm:grid-cols-3 md:grid-cols-5 '>
 			{filters.map((filter) => (
-				<div>
+				<div key={filter.placeholder}>
 					<label
 						className='text-sm'
 						htmlFor={filter.placeholder

@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
 import millify from "millify";
 import { baseUrl, fetchApi } from "../../utils/fetchApi";
 import ImageSlider from "../../components/ImageSlider";
+import Image from "next/image";
 
 const PropertyDetails = ({
 	propertyDetails: {
@@ -42,7 +42,7 @@ const PropertyDetails = ({
 							</p>
 						</div>
 						<div className='h-10 w-10 overflow-hidden rounded-full border border-slate-200'>
-							<img
+							<Image
 								className='h-full w-full'
 								src={agency?.logo?.url}
 								height='100%'
