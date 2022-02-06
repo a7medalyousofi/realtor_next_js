@@ -35,10 +35,12 @@ function Property({
 				</div>
 				<div className='flex items-center justify-between'>
 					<div className='flex items-center space-x-4'>
-						{isVerified && <GoVerified className='text-blue-600' />}
-						<p className='font-bold text-slate-800'>
+						{isVerified && (
+							<GoVerified className='text-green-600' />
+						)}
+						<p className='font-bold text-orange-600'>
 							AED {millify(price)}{" "}
-							<span className='text-sm capitalize font-semibold text-slate-500'>
+							<span className='text-xs capitalize font-semibold text-slate-500'>
 								{rentFrequency && `/ ${rentFrequency}`}
 							</span>
 						</p>
@@ -53,7 +55,7 @@ function Property({
 						/>
 					</div>
 				</div>
-				<div className='flex items-center space-x-8'>
+				<div className='flex items-center justify-between'>
 					<div className='flex items-center space-x-2'>
 						<div className='h-8 w-8 bg-blue-100 p-1 grid place-items-center rounded-md'>
 							<FaBed className='text-blue-600' />
@@ -88,7 +90,7 @@ function Property({
 						</p>
 					</div>
 				</div>
-				<p className='capitalize'>
+				<p className='capitalize font-medium text-slate-500'>
 					{title.length > 30
 						? `${title.substring(0, 30).toLowerCase()} ...`
 						: title}

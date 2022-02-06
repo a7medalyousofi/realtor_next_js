@@ -26,7 +26,7 @@ function Navbar() {
 						<a className='font-medium flex items-center space-x-1 text-slate-500 hover:text-blue-600'>
 							<FiGrid />
 							<p className='flex'>
-								Buy
+								Buy{" "}
 								<span className='hidden md:flex'>Property</span>
 							</p>
 						</a>
@@ -35,8 +35,11 @@ function Navbar() {
 						<a className='font-medium flex items-center space-x-1 text-slate-500 hover:text-blue-600'>
 							<FiKey />
 							<p className='flex'>
-								Rent
-								<span className='hidden md:flex'>Property</span>
+								Rent{" "}
+								<span className='hidden md:flex'>
+									{" "}
+									Property
+								</span>
 							</p>
 						</a>
 					</Link>
