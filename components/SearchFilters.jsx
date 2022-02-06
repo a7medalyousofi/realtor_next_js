@@ -22,7 +22,7 @@ function SearchFilters() {
 	};
 
 	return (
-		<div className='w-full bg-slate-50 p-4 rounded-lg grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 '>
+		<div className='grid w-full grid-cols-2 gap-2 rounded-lg bg-slate-50 p-4 sm:grid-cols-3 md:grid-cols-5 '>
 			{filters.map((filter) => (
 				<div>
 					<label
@@ -45,7 +45,7 @@ function SearchFilters() {
 							})
 						}
 						placeholder={filter.placeholder}
-						className='w-full text-sm mt-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50'>
+						className='mt-1 w-full rounded-md border-gray-300 text-sm shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50'>
 						{filter?.items?.map((item) => (
 							<option value={item.value} key={item.value}>
 								{item.name}

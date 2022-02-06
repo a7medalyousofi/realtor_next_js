@@ -22,8 +22,8 @@ function Property({
 }) {
 	return (
 		<Link href={`/property/${externalID}`} passHref>
-			<div className='cursor-pointer bg-white p-4 rounded-2xl border border-slate-200 space-y-4 hover:shadow-lg hover:shadow-slate-300/20 hover:scale-105 transition-all duration-300'>
-				<div className='min-h-[260px] h-[260px] w-full rounded-lg overflow-hidden'>
+			<div className='cursor-pointer space-y-4 rounded-2xl border border-slate-200 bg-white p-4 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-300/20'>
+				<div className='h-[260px] min-h-[260px] w-full overflow-hidden rounded-lg'>
 					<img
 						className='h-full w-full'
 						src={coverPhoto ? coverPhoto.url : DefaultImage}
@@ -39,12 +39,12 @@ function Property({
 						)}
 						<p className='font-bold text-orange-600'>
 							AED {millify(price)}{" "}
-							<span className='text-xs capitalize font-semibold text-slate-600'>
+							<span className='text-xs font-semibold capitalize text-slate-600'>
 								{rentFrequency && `/ ${rentFrequency}`}
 							</span>
 						</p>
 					</div>
-					<div className='h-10 w-10 rounded-full border border-slate-200 overflow-hidden'>
+					<div className='h-10 w-10 overflow-hidden rounded-full border border-slate-200'>
 						<img
 							className='h-full w-full'
 							src={agency?.logo?.url}
@@ -56,7 +56,7 @@ function Property({
 				</div>
 				<div className='flex items-center justify-between'>
 					<div className='flex items-center space-x-2'>
-						<div className='h-8 w-8 bg-blue-100 p-1 grid place-items-center rounded-md'>
+						<div className='grid h-8 w-8 place-items-center rounded-md bg-blue-100 p-1'>
 							<FaBed className='text-blue-600' />
 						</div>
 						<p className='text-slate-500'>
@@ -67,7 +67,7 @@ function Property({
 						</p>
 					</div>
 					<div className='flex items-center space-x-2'>
-						<div className='h-8 w-8 bg-blue-100 p-1 grid place-items-center rounded-md'>
+						<div className='grid h-8 w-8 place-items-center rounded-md bg-blue-100 p-1'>
 							<FaBath className='text-blue-600' />
 						</div>
 						<p className='text-slate-500'>
@@ -78,7 +78,7 @@ function Property({
 						</p>
 					</div>
 					<div className='flex items-center space-x-2'>
-						<div className='h-8 w-8 bg-blue-100 p-1 grid place-items-center rounded-md'>
+						<div className='grid h-8 w-8 place-items-center rounded-md bg-blue-100 p-1'>
 							<BsGridFill className='text-blue-600' />
 						</div>
 						<p className='text-slate-500'>
@@ -89,7 +89,7 @@ function Property({
 						</p>
 					</div>
 				</div>
-				<p className='capitalize font-medium text-slate-500'>
+				<p className='font-medium capitalize text-slate-500'>
 					{title.length > 30
 						? `${title.substring(0, 30).toLowerCase()} ...`
 						: title}

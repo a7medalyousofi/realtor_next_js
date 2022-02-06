@@ -9,7 +9,7 @@ const LeftArrow = () => {
 	return (
 		<div
 			onClick={prevSlide}
-			className='flex items-center justify-center cursor-pointer'>
+			className='flex cursor-pointer items-center justify-center'>
 			<FaArrowAltCircleLeft />
 		</div>
 	);
@@ -19,7 +19,7 @@ const RightArrow = () => {
 	return (
 		<div
 			onClick={nextSlide}
-			className='flex items-center justify-center cursor-pointer'>
+			className='flex cursor-pointer items-center justify-center'>
 			<FaArrowAltCircleRight />
 		</div>
 	);

@@ -15,12 +15,12 @@ function Layout({ children }) {
 				/>
 			</Head>
 			<div className='space-y-4'>
-				<header className='bg-white border-b border-slate-200'>
+				<header className='border-b border-slate-200 bg-white'>
 					<Navbar />
 				</header>
 
 				<main>{children}</main>
-				<footer className='bg-white border-t border-slate-200'>
+				<footer className='border-t border-slate-200 bg-white'>
 					<Footer />
 				</footer>
 			</div>

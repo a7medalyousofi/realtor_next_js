@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { baseUrl, fetchApi } from "../utils/fetchApi";
 import Property from "./../components/Property";
 
@@ -13,8 +12,8 @@ const Banner = ({
 	linkUrl,
 	btnLabel,
 }) => (
-	<div className='bg-white border-y border-slate-200'>
-		<div className='container mx-auto flex flex-col md:flex-row justify-start gap-6 md:gap-12 items-center px-4 py-8'>
+	<div className='border-y border-slate-200 bg-white'>
+		<div className='container mx-auto flex flex-col items-center justify-start gap-6 px-4 py-8 md:flex-row md:gap-12'>
 			<img
 				className='rounded-lg'
 				src={imageUrl}
@@ -23,16 +22,16 @@ const Banner = ({
 				alt={`${primaryTitle}`}
 			/>
 			<div className=''>
-				<p className='text-gray-500 text-sm font-medium'>{purpose}</p>
+				<p className='text-sm font-medium text-gray-500'>{purpose}</p>
 				<p className='text-3xl font-bold text-slate-700'>
 					{primaryTitle} <br /> {secondaryTitle}
 				</p>
-				<p className='text-lg py-3 font-bold text-gray-500'>
+				<p className='py-3 text-lg font-bold text-gray-500'>
 					{primaryDesc} <br /> {secondaryDesc}
 				</p>
 				<button
 					type='button'
-					className='transition-all h-10 px-6 font-semibold rounded-lg  bg-blue-600 hover:bg-blue-500 text-white'>
+					className='h-10 rounded-lg bg-blue-600 px-6 font-semibold  text-white transition-all hover:bg-blue-500'>
 					<Link href={linkUrl}>{btnLabel}</Link>
 				</button>
 			</div>
@@ -53,8 +52,8 @@ export default function Home({ propertyForSale, propertyForRent }) {
 				linkUrl='/search?purpose=for-rent'
 				imageUrl='https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4'
 			/>
-			<div className='bg-white border-y border-slate-200'>
-				<div className='container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6'>
+			<div className='border-y border-slate-200 bg-white'>
+				<div className='container mx-auto grid grid-cols-1 gap-6 px-4 py-8 md:grid-cols-3'>
 					{propertyForRent.map((property) => (
 						<Property property={property} key={property.id} />
 					))}
@@ -70,8 +69,8 @@ export default function Home({ propertyForSale, propertyForRent }) {
 				linkUrl='/search?purpose=for-sale'
 				imageUrl='https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008'
 			/>
-			<div className='bg-white border-y border-slate-200'>
-				<div className='container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6'>
+			<div className='border-y border-slate-200 bg-white'>
+				<div className='container mx-auto grid grid-cols-1 gap-6 px-4 py-8 md:grid-cols-3'>
 					{propertyForSale.map((property) => (
 						<Property property={property} key={property.id} />
 					))}

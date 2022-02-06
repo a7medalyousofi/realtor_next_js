@@ -25,7 +25,7 @@ const PropertyDetails = ({
 	},
 }) => {
 	return (
-		<div className='bg-white border-y border-slate-200'>
+		<div className='border-y border-slate-200 bg-white'>
 			<div className='container mx-auto p-4'>
 				{photos && <ImageSlider data={photos} />}
 				<div className='space-y-4'>
@@ -36,12 +36,12 @@ const PropertyDetails = ({
 							)}
 							<p className='font-bold text-orange-600'>
 								AED {millify(price)}{" "}
-								<span className='text-xs capitalize font-semibold text-slate-500'>
+								<span className='text-xs font-semibold capitalize text-slate-500'>
 									{rentFrequency && `/ ${rentFrequency}`}
 								</span>
 							</p>
 						</div>
-						<div className='h-10 w-10 rounded-full border border-slate-200 overflow-hidden'>
+						<div className='h-10 w-10 overflow-hidden rounded-full border border-slate-200'>
 							<img
 								className='h-full w-full'
 								src={agency?.logo?.url}
@@ -53,7 +53,7 @@ const PropertyDetails = ({
 					</div>
 					<div className='flex items-center justify-between md:justify-start md:space-x-8'>
 						<div className='flex items-center space-x-2'>
-							<div className='h-8 w-8 bg-blue-100 p-1 grid place-items-center rounded-md'>
+							<div className='grid h-8 w-8 place-items-center rounded-md bg-blue-100 p-1'>
 								<FaBed className='text-blue-600' />
 							</div>
 							<p className='text-slate-500'>
@@ -64,7 +64,7 @@ const PropertyDetails = ({
 							</p>
 						</div>
 						<div className='flex items-center space-x-2'>
-							<div className='h-8 w-8 bg-blue-100 p-1 grid place-items-center rounded-md'>
+							<div className='grid h-8 w-8 place-items-center rounded-md bg-blue-100 p-1'>
 								<FaBath className='text-blue-600' />
 							</div>
 							<p className='text-slate-500'>
@@ -75,7 +75,7 @@ const PropertyDetails = ({
 							</p>
 						</div>
 						<div className='flex items-center space-x-2'>
-							<div className='h-8 w-8 bg-blue-100 p-1 grid place-items-center rounded-md'>
+							<div className='grid h-8 w-8 place-items-center rounded-md bg-blue-100 p-1'>
 								<BsGridFill className='text-blue-600' />
 							</div>
 							<p className='text-slate-500'>
@@ -86,10 +86,10 @@ const PropertyDetails = ({
 							</p>
 						</div>
 					</div>
-					<h2 className='capitalize font-semibold text-blue-500'>
+					<h2 className='font-semibold capitalize text-blue-500'>
 						{title}
 					</h2>
-					<p className='font-normal text-sm text-slate-500 leading-relaxed'>
+					<p className='text-sm font-normal leading-relaxed text-slate-500'>
 						{description}
 					</p>
 					<div className='flex space-x-6'>
@@ -115,11 +115,11 @@ const PropertyDetails = ({
 						)}
 					</div>
 					{amenities.length && (
-						<ul className='text-sm text-blue-500 font-medium flex flex-wrap gap-2 md:gap-4'>
+						<ul className='flex flex-wrap gap-2 text-sm font-medium text-blue-500 md:gap-4'>
 							{amenities.map((amenitiy) => (
 								<li
 									key={amenitiy.text}
-									className='bg-blue-50 px-2 py-1 grid place-items-center rounded-md'>
+									className='grid place-items-center rounded-md bg-blue-50 px-2 py-1'>
 									{amenitiy.text}
 								</li>
 							))}
