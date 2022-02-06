@@ -7,7 +7,7 @@ function Navbar() {
 		<div className='container mx-auto p-4'>
 			<div className='flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0'>
 				<Link href='/'>
-					<a className='font-bold'>Realtor</a>
+					<a className='font-bold text-blue-600'>Realtor</a>
 				</Link>
 				<div className='flex items-center space-x-6'>
 					<Link href='/'>

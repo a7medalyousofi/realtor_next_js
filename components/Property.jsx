@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
@@ -23,7 +22,7 @@ function Property({
 }) {
 	return (
 		<Link href={`/property/${externalID}`} passHref>
-			<div className='cursor-pointer bg-white p-4 rounded-2xl border border-slate-200 space-y-4'>
+			<div className='cursor-pointer bg-white p-4 rounded-2xl border border-slate-200 space-y-4 hover:shadow-lg hover:shadow-slate-300/20 hover:scale-105 transition-all duration-300'>
 				<div className='min-h-[260px] h-[260px] w-full rounded-lg overflow-hidden'>
 					<img
 						className='h-full w-full'
@@ -40,7 +39,7 @@ function Property({
 						)}
 						<p className='font-bold text-orange-600'>
 							AED {millify(price)}{" "}
-							<span className='text-xs capitalize font-semibold text-slate-500'>
+							<span className='text-xs capitalize font-semibold text-slate-600'>
 								{rentFrequency && `/ ${rentFrequency}`}
 							</span>
 						</p>

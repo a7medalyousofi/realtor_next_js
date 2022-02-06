@@ -15,11 +15,11 @@ const Banner = ({
 }) => (
 	<div className='bg-white border-y border-slate-200'>
 		<div className='container mx-auto flex flex-col md:flex-row justify-start gap-6 md:gap-12 items-center px-4 py-8'>
-			<Image
+			<img
 				className='rounded-lg'
 				src={imageUrl}
-				width={500}
-				height={300}
+				width='500px'
+				height='300px'
 				alt={`${primaryTitle}`}
 			/>
 			<div className=''>

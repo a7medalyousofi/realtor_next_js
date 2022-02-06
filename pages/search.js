@@ -38,11 +38,16 @@ function Search({ properties }) {
 					<p className='text-xl font-semibold select-none'>
 						Properties {router.query.purpose}
 					</p>
-					<div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-5'>
-						{properties.map((property) => (
-							<Property property={property} key={property.id} />
-						))}
-					</div>
+					{properties.length > 0 && (
+						<div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-5'>
+							{properties.map((property) => (
+								<Property
+									property={property}
+									key={property.id}
+								/>
+							))}
+						</div>
+					)}
 					{properties.length === 0 && (
 						<div className='mt-5'>No result found!</div>
 					)}
