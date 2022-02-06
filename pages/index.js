@@ -13,7 +13,7 @@ const Banner = ({
 	btnLabel,
 }) => (
 	<div className='border-y border-slate-200 bg-white'>
-		<div className='container mx-auto flex flex-col items-center justify-start gap-6 px-4 py-8 md:flex-row md:gap-12'>
+		<div className='container mx-auto flex flex-col justify-start gap-6 px-4 py-8 md:flex-row md:items-center md:gap-12'>
 			<img
 				className='rounded-lg'
 				src={imageUrl}
@@ -21,7 +21,7 @@ const Banner = ({
 				height='300px'
 				alt={`${primaryTitle}`}
 			/>
-			<div className=''>
+			<div>
 				<p className='text-sm font-medium text-gray-500'>{purpose}</p>
 				<p className='text-3xl font-bold text-slate-700'>
 					{primaryTitle} <br /> {secondaryTitle}
