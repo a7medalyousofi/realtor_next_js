@@ -5,7 +5,6 @@ import { GoVerified } from "react-icons/go";
 import millify from "millify";
 
 import DefaultImage from "../assets/images/house.jpg";
-import Image from "next/image";
 
 function Property({
 	property: {
@@ -25,7 +24,7 @@ function Property({
 		<Link href={`/property/${externalID}`} passHref>
 			<div className='cursor-pointer space-y-4 rounded-2xl border border-slate-200 bg-white p-4 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-300/20'>
 				<div className='h-[260px] min-h-[260px] w-full overflow-hidden rounded-lg'>
-					<Image
+					<img
 						className='h-full w-full'
 						src={coverPhoto ? coverPhoto.url : DefaultImage}
 						height='100%'
@@ -46,7 +45,7 @@ function Property({
 						</p>
 					</div>
 					<div className='h-10 w-10 overflow-hidden rounded-full border border-slate-200'>
-						<Image
+						<img
 							className='h-full w-full'
 							src={agency?.logo?.url}
 							height='100%'

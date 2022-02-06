@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import { filterData, getFilterValues } from "../utils/filterData";
 function SearchFilters() {
-	const [filters, setFilters] = useState(filterData);
+	const [filters, getFilterValues] = useState(filterData);
 	const router = useRouter();
 
 	const searchProperties = (filterValues) => {

@@ -4,7 +4,6 @@ import { GoVerified } from "react-icons/go";
 import millify from "millify";
 import { baseUrl, fetchApi } from "../../utils/fetchApi";
 import ImageSlider from "../../components/ImageSlider";
-import Image from "next/image";
 
 const PropertyDetails = ({
 	propertyDetails: {
@@ -42,7 +41,7 @@ const PropertyDetails = ({
 							</p>
 						</div>
 						<div className='h-10 w-10 overflow-hidden rounded-full border border-slate-200'>
-							<Image
+							<img
 								className='h-full w-full'
 								src={agency?.logo?.url}
 								height='100%'
@@ -114,7 +113,7 @@ const PropertyDetails = ({
 							</p>
 						)}
 					</div>
-					{amenities.length && (
+					{amenities.length > 0 && (
 						<ul className='flex flex-wrap gap-2 text-sm font-medium text-blue-500 md:gap-4'>
 							{amenities.map((amenitiy) => (
 								<li
